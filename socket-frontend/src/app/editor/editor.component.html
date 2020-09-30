@@ -1,0 +1,5 @@
+<button mat-raised-button color="primary" style="margin: 0.4rem;" [cdkCopyToClipboard]="'http://localhost:4200/document/' + urlKey">Copy URL</button>
+<div> 
+    <textarea *ngIf="isTextAreaVisible"  (keyup)="SendMessage()" [(ngModel)]="message"></textarea>
+</div>
+<p style="margin: 0.4rem;" *ngIf="!isTextAreaVisible">There is no document available in this endpoint. Check if you entered the correct url or create a new Document by clicking the button above.</p>
